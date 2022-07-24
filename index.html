@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Punktów Twitch</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <h1>Witaj w kalkulatorze punktów twitch!</h1>
+        <label for="choice">Wybierz co chcesz zrobić</label>
+        <select id="choice">
+            <option>Wybierz</option>
+            <option value="time">Wylicz ile dostaniesz punktów za pomocą czasu</option>
+            <option value="points">Wylicz ile czasu zajmie zdobycie punktów</option>
+        </select>
+        <div id="calculator-labels"></div>
+        <p id="result"></p>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
