@@ -44,17 +44,18 @@ function addTags(event) {
 
 function calculate(event) {
    let name = event.target.name;
+   let subscription = document.getElementById("subscription").value;
    switch (name) {
        case "time":
            let days = document.getElementById("days").value;
            let hours = document.getElementById("hours").value;
            let minutes = document.getElementById("minutes").value;
            let calculatePoints = ((days * 24 * 60) + (hours * 60) + Number(minutes)) * 3;
-           result.innerText = "Ilość punktów które zdobędziesz w podany czas to: " + Math.trunc(calculatePoints);
+           result.innerText = "W podany przez Ciebie czas zdobędziesz " + Math.trunc(calculatePoints * subscription) + " punktów!";
            break;
        case "points":
            let points = document.getElementById("points").value;
-           result.innerText = getTimeFromMinutes(Math.trunc((points / 60) * 20));
+           result.innerText = getTimeFromMinutes(Math.trunc((points / Math.trunc(60 * subscription)) * 20));
            break;
    }
 }
